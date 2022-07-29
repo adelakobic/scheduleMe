@@ -36,14 +36,15 @@ The following animation demonstrates the application functionality.
 * geting 
 
 ## Changes made to the code 𝌡
-* the 
+* To be made: Past events: grey, Current events: red, Future events: green
 
 ## Link to the deployed website 💻
 URL: 
 
 ## Credits 💃🏻
 * Starter code provided by the Universoty of Birmingham.
-* Moment JS website [Moment.js](https://momentjs.com/)
+* Bootstrap for CSS
+* Moment JS website [Moment.js](https://momentjs.com/) for the time JS elements
 
 ## Licence 🪪
 * MIT License is included in this project. 
