@@ -44,7 +44,7 @@ The following animation demonstrates the application functionality.
 URL: 
 
 ## Credits 💃🏻
-* Starter code provided by the Universoty of Birmingham.
+* Starter code (HTML CSS and JavaScript) provided by the University of Birmingham.
 * Bootstrap for CSS
 * Moment JS website [Moment.js](https://momentjs.com/) for the time JS elements
 
