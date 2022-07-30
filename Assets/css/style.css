@@ -68,6 +68,7 @@ body {
   .saveBtn i:hover {
     font-size: 20px;
     transition: all 0.3s ease-in-out;
+    color: rgb(247, 247, 34);
   }
   /* Extra Notifications */
   .notification {

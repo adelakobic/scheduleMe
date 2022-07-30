@@ -16,13 +16,13 @@ This project is to create a simple calendar application that allows a user to sa
 ## Acceptance Criteria ✅
 GIVEN I am using a daily planner to create a schedule
 * WHEN I open the planner
-    THEN the current day is displayed at the top of the calendar
+    THEN the current day is displayed at the top of the calendar ✅
 * WHEN I scroll down
-    THEN I am presented with timeblocks for standard business hours
+    THEN I am presented with timeblocks for standard business hours e✅
 * WHEN I view the timeblocks for that day
     THEN each timeblock is color coded to indicate whether it is in the past, present, or future
 * WHEN I click into a timeblock
-    THEN I can enter an event
+    THEN I can enter an event ✅
 * WHEN I click the save button for that timeblock
     THEN the text for that event is saved in local storage
 * WHEN I refresh the page
@@ -36,6 +36,8 @@ The following animation demonstrates the application functionality.
 * geting 
 
 ## Changes made to the code 𝌡
+* add the time blocks to the scheduler using Bootstrap: grids 
+* added hover color to the save button
 * To be made: Past events: grey, Current events: red, Future events: green
 
 ## Link to the deployed website 💻
