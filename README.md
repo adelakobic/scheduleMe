@@ -33,12 +33,16 @@ The following animation demonstrates the application functionality.
 ![User clicks on the slots of the color-coded calendar and edits the events](./Assets/images/05-third-party-apis-homework-demo.gif)
 
 ## Problems encountered 🤯
-* geting 
+* geting the past events to turn grey, and getting the present events to turn red 31/7/22 
+* making sure the event saves to console log 31/7/22 
 
 ## Changes made to the code 𝌡
+* updated links to Bootstrap, jQuery, jQuery UI and Moments.js to most current version available
 * add the time blocks to the scheduler using Bootstrap: grids 
 * added hover color to the save button
-* To be made: Past events: grey, Current events: red, Future events: green
+* To be made: Past events: grey, Current events: red, Future events: green - at present all events are green 31/7/22 
+* added time to be displayed at the top of the page
+* changed the class names from "hour10" to "hour-10" and the timing blocks now work and colour the correct way 
 
 ## Link to the deployed website 💻
 URL: 
@@ -50,3 +54,6 @@ URL:
 
 ## Licence 🪪
 * MIT License is included in this project. 
+* Bootstrap carries MIT licence
+* Moment.js carries MIT licence
+* jQuery carries MIT licence
