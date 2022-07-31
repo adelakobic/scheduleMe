@@ -21,6 +21,12 @@ body {
     border-bottom: 10px solid black;
   }
   
+  #currentDay {
+    color: rgb(225, 18, 42);
+    text-emphasis: bolder;
+    font-weight: 1000;
+  }
+  
   .description {
     white-space: pre-wrap;
   }
