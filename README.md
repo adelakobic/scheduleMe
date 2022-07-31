@@ -34,7 +34,7 @@ The following animation demonstrates the application functionality.
 
 ## Problems encountered 🤯
 * geting the past events to turn grey, and getting the present events to turn red 31/7/22 
-* making sure the event saves to console log 31/7/22 
+* making sure the event saves to console log 31/7/22 something not working in JS code
 
 ## Changes made to the code 𝌡
 * updated links to Bootstrap, jQuery, jQuery UI and Moments.js to most current version available

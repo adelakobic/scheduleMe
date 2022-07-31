@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    // listen for save button clicks
+    // event listener for save button clicks to save the item to agenda 
     $('.saveBtn').on('click', function () {
       // get nearby values
       var value = $(this).siblings('.description').val();
@@ -45,7 +45,7 @@ $(document).ready(function () {
     // set up interval to check if current time needs to be updated
     var interval = setInterval(hourUpdater, 15000);
   
-    // load any saved data from localStorage
+    // load any saved data (events) from localStorage
     $('#hour-9 .description').val(localStorage.getItem('hour-9'));
     $('#hour-10 .description').val(localStorage.getItem('hour-10'));
     $('#hour-11 .description').val(localStorage.getItem('hour-11'));
@@ -58,6 +58,6 @@ $(document).ready(function () {
     $('#hour-18 .description').val(localStorage.getItem('hour-18'));
   
     // display current day on page - updated to include the time too
-    $('#currentDay').text(moment().format('dddd, MMMM Do, h:mm:ss a'));
+    $('#currentDay').text(moment().format('dddd, MMMM Do, LTS'));
   });
   
