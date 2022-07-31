@@ -45,7 +45,7 @@ The following animation demonstrates the application functionality.
 * changed the class names from "hour10" to "hour-10" and the timing blocks now work and colour the correct way 
 
 ## Link to the deployed website 💻
-URL: 
+URL: https://adelakobic.github.io/scheduleMe/
 
 ## Credits 💃🏻
 * Starter code (HTML CSS and JavaScript) provided by the University of Birmingham.

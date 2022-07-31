@@ -16,11 +16,8 @@ $(document).ready(function () {
         $('.notification').removeClass('show');
       }, 5000);
 
-      // return text to the console log - not working as yet 
+      // return text to the console log - not working as yet - is it needed?
       $(".description").text();
-      $( "p" ).click(function( event ) {
-        alert( event.text === this ); // true
-      });
     });
   
     function hourUpdater() {
