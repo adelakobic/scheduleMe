@@ -36,7 +36,7 @@ The following animation demonstrates the application functionality.
 * geting the past events to turn grey, and getting the present events to turn red 31/7/22 
 * making sure the event saves to console log 31/7/22 something not working in JS code
 * * HAD TO START ALL JS CODE AGAIN - tutor advice the JS was not supposed to be in starter code so it cannot be used
-* Time display not working 2/8/22 
+* Time display not working 2/8/22 - showing an hour GMT time but an hour behind the browser/local time in UK
 * 
 
 ## Changes made to the code 𝌡

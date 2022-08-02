@@ -4,7 +4,7 @@ $(document).ready(function () {
     $('.saveBtn').on('click',function () {
 
       var timeBlock = $(this).parent().attr('id');
-      var value = $(this).siblings('.description');
+      var value = $(this).siblings('.description').val();
 
       // save the event in localStorage
       localStorage.setItem(timeBlock, value);
@@ -27,7 +27,7 @@ $(document).ready(function () {
       // get current time from server
       var currentHour = moment().hours();
   
-      // loop over time blocks - cant have
+      // loop over time blocks 
       $('.time-col').each(function (){
         var colHour = parseInt($(this).attr('id').split('-')[1]);
         // if past = grey in CSS, if present = red in CSS, if future = green in CSS
