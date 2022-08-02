@@ -54,7 +54,8 @@ URL: https://adelakobic.github.io/scheduleMe/
 * Starter code (HTML and CSS) provided by the University of Birmingham.
 * Bootstrap for CSS
 * Moment JS website [Moment.js](https://momentjs.com/) for the time JS elements
-* from StackOverflow : https://stackoverflow.com/questions/13313348/jquery-update-time 
+* referenced: StackOverflow : https://stackoverflow.com/questions/13313348/jquery-update-time 
+* referenced: https://htmlcheatsheet.com/jquery/ 
 
 ## Licence 🪪
 * MIT License is included in this project. 
