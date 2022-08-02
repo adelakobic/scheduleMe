@@ -1,9 +1,15 @@
+// basic function
 $(document).ready(function () {
+    // display current day on page - updated to include the time too - links to ID current day HTML
+    //$('#currentDay').text(moment().format('dddd, MMMM Do, LTS'));
+    var displayDate(){
+      $("#currentDay").text(moment().format('dddd, MMM Do, LTS'));
+    }
+
     // event listener for save button clicks to save the item to agenda 
-    $('.saveBtn').on('click', function () {
-      // get nearby values
-      var value = $(this).siblings('.description').val();
-      var time = $(this).parent().attr('id');
+    $('.saveBtn').on('click',function () {
+    
+    }
   
       // save the event in localStorage
       localStorage.setItem(time, value);
@@ -20,19 +26,19 @@ $(document).ready(function () {
       $(".description").text();
     });
   
-    function hourUpdater() {
+    function hourUpdate() {
       // get current number of hours
       var currentHour = moment().hours();
       //var currentHour = moment.locale();
   
       // loop over time blocks
-      $('.time-block').each(function () {
-        var blockHour = parseInt($(this).attr('id').split('-')[1]);
+      $('.time-col').each(function () {
+        var colHour = parseInt($(this).attr('id').split('-')[1]);
   
         // check if we've moved past this time
-        if (blockHour < currentHour) {
+        if (colHour < currentHour) {
           $(this).addClass('past');
-        } else if (blockHour === currentHour) {
+        } else if (colHour === currentHour) {
           $(this).removeClass('past');
           $(this).addClass('present');
         } else {
@@ -43,7 +49,7 @@ $(document).ready(function () {
       });
     }
   
-    hourUpdater();
+    hourUpdate();
   
     // set up interval to check if current time needs to be updated
     var interval = setInterval(hourUpdater, 15000);
@@ -60,7 +66,7 @@ $(document).ready(function () {
     $('#hour-17 .description').val(localStorage.getItem('hour-17'));
     $('#hour-18 .description').val(localStorage.getItem('hour-18'));
   
-    // display current day on page - updated to include the time too
-    $('#currentDay').text(moment().format('dddd, MMMM Do, LTS'));
+    // display current day on page - updated to include the time too - links to ID current day HTML
+    //$('#currentDay').text(moment().format('dddd, MMMM Do, LTS'));
   });
   
