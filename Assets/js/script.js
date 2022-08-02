@@ -1,29 +1,25 @@
 // basic function
 $(document).ready(function () {
-    // display current day on page - updated to include the time too - links to ID current day HTML
-    //$('#currentDay').text(moment().format('dddd, MMMM Do, LTS'));
-    var displayDate(){
-      $("#currentDay").text(moment().format('dddd, MMM Do, LTS'));
-    }
-
     // event listener for save button clicks to save the item to agenda 
     $('.saveBtn').on('click',function () {
-    
-    }
-  
+
+      var timeBlock = $(this).parent().attr('id');
+      var value = $(this).siblings('.description');
+
       // save the event in localStorage
-      localStorage.setItem(time, value);
+      localStorage.setItem(timeBlock, value);
   
-      // Show notification that item was saved to localStorage by adding class 'show'
+      // Show notification that item was saved to local Storage by adding class 'show'
       $('.notification').addClass('show');
-  
-      // Timeout to remove 'notification that is stored' class after 5 seconds - this works already
+
+      //time out so the message dissapears 
       setTimeout(function () {
-        $('.notification').removeClass('show');
-      }, 5000);
+      $('.notification').removeClass('show');
+      }, 7000);
 
       // return text to the console log - not working as yet - is it needed?
       $(".description").text();
+      console/log("text");
     });
   
     function hourUpdate() {
@@ -31,11 +27,11 @@ $(document).ready(function () {
       var currentHour = moment().hours();
       //var currentHour = moment.locale();
   
-      // loop over time blocks
+      // loop over time blocks - cant have
       $('.time-col').each(function () {
         var colHour = parseInt($(this).attr('id').split('-')[1]);
   
-        // check if we've moved past this time
+        // check if we've moved past this time - cant have
         if (colHour < currentHour) {
           $(this).addClass('past');
         } else if (colHour === currentHour) {
@@ -50,9 +46,22 @@ $(document).ready(function () {
     }
   
     hourUpdate();
+    // from StackOverflow : https://stackoverflow.com/questions/13313348/jquery-update-time 
+    var serverTime = new Date();
+
+    function updateTime() {
+    /// Increment serverTime by 1 second and update the html for '#time'
+    serverTime = new Date(serverTime.getTime() + 1000);
+    $('#currentDay').html(serverTime.toGMTString());
+    }
+
+    $(function() {
+    updateTime();
+    setInterval(updateTime, 1000);
+    })
   
-    // set up interval to check if current time needs to be updated
-    var interval = setInterval(hourUpdater, 15000);
+    // set up interval to check if current time needs to be updated - can't use 
+    //var interval = setInterval(hourUpdater, 15000);
   
     // load any saved data (events) from localStorage
     $('#hour-9 .description').val(localStorage.getItem('hour-9'));
@@ -67,6 +76,6 @@ $(document).ready(function () {
     $('#hour-18 .description').val(localStorage.getItem('hour-18'));
   
     // display current day on page - updated to include the time too - links to ID current day HTML
-    //$('#currentDay').text(moment().format('dddd, MMMM Do, LTS'));
+    $('#currentDay').text(moment().format('dddd, MMMM Do, LTS'));
   });
   
