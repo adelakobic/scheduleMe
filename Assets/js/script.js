@@ -10,12 +10,13 @@ $(document).ready(function () {
       localStorage.setItem(timeBlock, value);
   
       // Show notification that item was saved to local Storage by adding class 'show'
+      // referenced: https://htmlcheatsheet.com/jquery/ 
       $('.notification').addClass('show');
 
       //time out so the message dissapears 
       setTimeout(function () {
       $('.notification').removeClass('show');
-      }, 7000);
+      }, 6000);
 
       // return text to the console log - not working as yet - is it needed?
       $(".description").text();
@@ -23,12 +24,26 @@ $(document).ready(function () {
     });
   
     function hourUpdate() {
-      // get current number of hours
+      // get current time from server
       var currentHour = moment().hours();
-      //var currentHour = moment.locale();
   
       // loop over time blocks - cant have
-      $('.time-col').each(function () {
+      $('.time-col').each(function (){
+        var colHour = parseInt($(this).attr('id').split('-')[1]);
+        // if past = grey in CSS, if present = red in CSS, if future = green in CSS
+        if (colHour < currentHour) {
+          $(this).addClass('.past');
+        } else if (colHour === currentHour){
+          $(this).removeClass('.past'); // must remove past before inserting present
+          $(this).addClass('present');
+        } else {
+          $(this).removeClass('.past'); //must remove past AND present before including
+          $(this).removeClass('.present');
+          $(this).addClass('.future');
+        }
+      }
+      )
+      //$('.time-col').each(function () {
         var colHour = parseInt($(this).attr('id').split('-')[1]);
   
         // check if we've moved past this time - cant have
