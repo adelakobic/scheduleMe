@@ -41,24 +41,10 @@ $(document).ready(function () {
           $(this).removeClass('.present');
           $(this).addClass('.future');
         }
-      }
-      )
-      //$('.time-col').each(function () {
-        var colHour = parseInt($(this).attr('id').split('-')[1]);
-  
-        // check if we've moved past this time - cant have
-        if (colHour < currentHour) {
-          $(this).addClass('past');
-        } else if (colHour === currentHour) {
-          $(this).removeClass('past');
-          $(this).addClass('present');
-        } else {
-          $(this).removeClass('past');
-          $(this).removeClass('present');
-          $(this).addClass('future');
-        }
       });
+      
     }
+      
   
     hourUpdate();
     // from StackOverflow : https://stackoverflow.com/questions/13313348/jquery-update-time 
@@ -72,11 +58,9 @@ $(document).ready(function () {
 
     $(function() {
     updateTime();
-    setInterval(updateTime, 1000);
+    setInterval(updateTime, 1000);  //interval to update time 
     })
   
-    // set up interval to check if current time needs to be updated - can't use 
-    //var interval = setInterval(hourUpdater, 15000);
   
     // load any saved data (events) from localStorage
     $('#hour-9 .description').val(localStorage.getItem('hour-9'));
