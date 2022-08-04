@@ -35,9 +35,9 @@ The following animation demonstrates the application functionality.
 ## Problems encountered 🤯
 * geting the past events to turn grey, and getting the present events to turn red 31/7/22 
 * making sure the event saves to console log 31/7/22 something not working in JS code
-* * HAD TO START ALL JS CODE AGAIN - tutor advice the JS was not supposed to be in starter code so it cannot be used
 * Time display not working 2/8/22 - showing an hour GMT time but an hour behind the browser/local time in UK
-* 
+* schedule colours - past is not turning grey and future is not turning green 2/7/22
+* schedule colours - removed the 'dot' in the classes for time and it changed the colours to their correct time allocation.
 
 ## Changes made to the code 𝌡
 * updated links to Bootstrap, jQuery, jQuery UI and Moments.js to most current version available

@@ -9,11 +9,11 @@ $(document).ready(function () {
       // save the event in localStorage
       localStorage.setItem(timeBlock, value);
   
-      // Show notification that item was saved to local Storage by adding class 'show'
+      // Show notification that item was saved to local storage
       // referenced: https://htmlcheatsheet.com/jquery/ 
       $('.notification').addClass('show');
 
-      //time out so the message dissapears 
+      // time out so the message dissapears after 6 seconds
       setTimeout(function () {
       $('.notification').removeClass('show');
       }, 6000);
@@ -32,19 +32,18 @@ $(document).ready(function () {
         var colHour = parseInt($(this).attr('id').split('-')[1]);
         // if past = grey in CSS, if present = red in CSS, if future = green in CSS
         if (colHour < currentHour) {
-          $(this).addClass('.past');
+          $(this).addClass('past');
         } else if (colHour === currentHour){
-          $(this).removeClass('.past'); // must remove past before inserting present
+          $(this).removeClass('past'); // must remove past before inserting present
           $(this).addClass('present');
         } else {
-          $(this).removeClass('.past'); //must remove past AND present before including
-          $(this).removeClass('.present');
-          $(this).addClass('.future');
+          $(this).removeClass('past'); //must remove past AND present before including
+          $(this).removeClass('present');
+          $(this).addClass('future');
         }
       });
       
     }
-      
   
     hourUpdate();
     // from StackOverflow : https://stackoverflow.com/questions/13313348/jquery-update-time 
