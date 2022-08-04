@@ -61,7 +61,7 @@ $(document).ready(function () {
     })
   
   
-    // load any saved data (events) from localStorage
+    // load any saved events from localStorage
     $('#hour-9 .description').val(localStorage.getItem('hour-9'));
     $('#hour-10 .description').val(localStorage.getItem('hour-10'));
     $('#hour-11 .description').val(localStorage.getItem('hour-11'));

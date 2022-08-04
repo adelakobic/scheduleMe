@@ -54,6 +54,7 @@ URL: https://adelakobic.github.io/scheduleMe/
 * Starter code (HTML and CSS) provided by the University of Birmingham.
 * Bootstrap for CSS
 * Moment JS website [Moment.js](https://momentjs.com/) for the time JS elements
+* Font Awsome for icons
 * referenced: StackOverflow : https://stackoverflow.com/questions/13313348/jquery-update-time 
 * referenced: https://htmlcheatsheet.com/jquery/ 
 
